@@ -1,6 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
+  dir: 'functions'
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'Authorization', '--trigger-http', '--runtime', 'nodejs8', '--env-vars-file', '../.env.yaml']
   dir: 'functions'
