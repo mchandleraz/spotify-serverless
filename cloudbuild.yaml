@@ -3,5 +3,5 @@ steps:
   args: ['functions', 'deploy', 'Authorization', '--trigger-http', '--runtime', 'nodejs10', '--entry-point', 'Authorization']
   dir: 'functions'
   env:
-    - 'client_id=us-east1-b'
+    - 'client_id=e35dc677e1d3423bbbf002cf09a67add'
     - 'redirect_uri=node-example-cluster'

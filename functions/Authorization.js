@@ -1,4 +1,4 @@
-exports.authorize = (req, res) => {
+exports.Authorization = (req, res) => {
   const scopes = 'user-read-private user-read-email';
   const { client_id, redirect_uri } = process.env;
 
