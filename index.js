@@ -23,8 +23,9 @@ module.exports = {
         return res.sendStatus(500)
       }
 
-      console.log(response)
       console.log(body)
+
+      res.sendStatus(200);
     });
   }
 }
