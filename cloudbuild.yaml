@@ -2,6 +2,3 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['functions', 'deploy', 'Authorization', '--trigger-http', '--runtime', 'nodejs8', '--env-vars-file', '../.env.yaml']
   dir: 'functions'
-  env:
-    - 'client_id=e35dc677e1d3423bbbf002cf09a67add'
-    - 'redirect_uri=https://us-central1-spotify-client-261703.cloudfunctions.net/OnAuthResponse'
