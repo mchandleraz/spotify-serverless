@@ -1,5 +1,3 @@
-const request = require('request');
-
 module.exports = function Authorization(req, res) {
   if (!req.query.code) {
     const scopes = 'user-read-private user-read-email';
@@ -18,4 +16,4 @@ module.exports = function Authorization(req, res) {
   }, (err, response, body) => {
     res.send(body)
   });
-}
+};
