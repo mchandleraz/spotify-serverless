@@ -1,3 +1,5 @@
+const request = require('request');
+
 module.exports = {
   Authorization(req, res) {
     if (!req.query.code) {
