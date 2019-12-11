@@ -1,5 +1,4 @@
-const Authorization = require('./Authorization')
-
 module.exports = {
-  Authorization: Authorization,
+  Authorization: require('./Authorization'),
+  OnAuthResponse: require('./OnAuthResponse'),
 };
