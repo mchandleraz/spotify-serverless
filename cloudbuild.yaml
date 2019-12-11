@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'Authorization', '--trigger-http', '--runtime', 'nodejs8', '--entry-point', 'Authorization', '--source', 'functions/']
+  args: ['functions', 'deploy', 'Authorization', '--trigger-http', '--runtime', 'nodejs8']
   dir: 'functions'
   env:
     - 'client_id=e35dc677e1d3423bbbf002cf09a67add'
