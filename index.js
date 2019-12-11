@@ -11,11 +11,11 @@ module.exports = {
 
     request.post({
       url: 'https://accounts.spotify.com/api/token',
-      body: {
+      body: JSON.stringify({
         grant_type: 'authorization_code',
         code: req.query.code,
         redirect_uri: process.env.redirect_uri,
-      },
+      }),
       json: true,
     }, (err, response, body) => {
       if (err) {
