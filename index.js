@@ -28,7 +28,8 @@ module.exports = {
         return res.sendStatus(500)
       }
 
-      console.log('response', Object.keys(response))
+      console.log('response', response.toJSON())
+      console.log(response.body)
       console.log('body', body)
 
       res.sendStatus(200);
