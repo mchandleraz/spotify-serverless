@@ -17,7 +17,13 @@ module.exports = {
         redirect_uri: process.env.redirect_uri,
       }
     }, (err, response, body) => {
-      res.send(body)
+      if (err) {
+        console.log(err)
+        return res.sendStatus(500)
+      }
+
+      console.log(response)
+      console.log(body)
     });
   }
 }
