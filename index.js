@@ -2,11 +2,10 @@ const request = require('request');
 
 module.exports = {
   Authorization(req, res) {
-    if (!req.query.code) {
-      const scopes = 'user-read-private user-read-email';
-      const { client_id, redirect_uri, client_secret } = process.env;
+    const { client_id, redirect_uri, client_secret } = process.env;
 
-      return res.redirect(`https://accounts.spotify.com/authorize?response_type=code&client_id=${client_id}&scope=${encodeURIComponent(scopes)}&redirect_uri=${encodeURIComponent(redirect_uri)}`);
+    if (!req.query.code) {
+      return res.redirect(`https://accounts.spotify.com/authorize?response_type=code&client_id=${client_id}&scope=${encodeURIComponent('user-read-private user-read-email')}&redirect_uri=${encodeURIComponent(redirect_uri)}`);
     }
 
     const postBody = {
